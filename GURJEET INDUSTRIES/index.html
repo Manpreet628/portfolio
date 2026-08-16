@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gurjeet Industry | Premium Tractor Spare Parts – Ludhiana</title>
+  <meta name="description" content="Gurjeet Industry manufactures high-quality tractor spare parts including engine components, transmission parts, hydraulic systems, and more. Located in Ludhiana, Punjab." />
+  <meta name="keywords" content="tractor spare parts, engine parts, transmission parts, hydraulic lift systems, Ludhiana, Gurjeet Industry" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:   { DEFAULT: '#0f2a4e', 50:'#e8f0fa', 100:'#c3d5f1', 200:'#9abae8', 300:'#6f9edd', 400:'#4a85d3', 500:'#2d6cc8', 600:'#1f56a8', 700:'#174088', 800:'#0f2a4e', 900:'#08172a' },
+            steel:     { DEFAULT: '#3a4a5c', 50:'#f0f2f5', 100:'#d8dde5', 200:'#b4bec9', 300:'#8e9dac', 400:'#6a7d8f', 500:'#3a4a5c', 600:'#2d3a49', 700:'#202b37', 800:'#141c24', 900:'#080e12' },
+            accent:    { DEFAULT: '#f97316', 50:'#fff7ed', 100:'#ffedd5', 200:'#fed7aa', 300:'#fdba74', 400:'#fb923c', 500:'#f97316', 600:'#ea6c0a', 700:'#c2570a', 800:'#9a4209', 900:'#7c3308' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Rajdhani', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #1e293b; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0f2a4e; }
+    ::-webkit-scrollbar-thumb { background: #f97316; border-radius: 3px; }
+
+    #navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: all 0.4s ease; }
+    #navbar.scrolled { background: rgba(8, 23, 42, 0.97) !important; backdrop-filter: blur(14px); box-shadow: 0 4px 30px rgba(0,0,0,0.4); }
+
+    .nav-link { position: relative; transition: color 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #f97316; transition: width 0.3s ease; }
+    .nav-link:hover::after { width: 100%; }
+
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, rgba(8,23,42,0.93) 0%, rgba(15,42,78,0.88) 50%, rgba(249,115,22,0.15) 100%),
+        url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600&q=80') center/cover no-repeat;
+    }
+
+    .gradient-text { background: linear-gradient(135deg, #f97316 0%, #fb923c 50%, #fbbf24 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    .section-underline { display: block; width: 60px; height: 4px; background: linear-gradient(90deg, #f97316, #fbbf24); border-radius: 2px; margin: 12px auto 0; }
+
+    .product-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; overflow: hidden; }
+    .product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(15,42,78,0.18); border-color: #f97316; }
+    .product-card .card-icon { width: 70px; height: 70px; background: linear-gradient(135deg, #0f2a4e, #1f56a8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; transition: transform 0.4s ease; }
+    .product-card:hover .card-icon { transform: rotate(10deg) scale(1.1); background: linear-gradient(135deg, #f97316, #c2570a); }
+
+    .why-card { background: linear-gradient(145deg, #fff 0%, #f8fafc 100%); border-radius: 16px; border: 1px solid #e2e8f0; transition: all 0.3s ease; }
+    .why-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(249,115,22,0.15); border-color: #f97316; }
+    .why-icon { width: 60px; height: 60px; border-radius: 14px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #f97316, #fbbf24); color: #fff; font-size: 1.4rem; margin-bottom: 16px; transition: transform 0.3s; }
+    .why-card:hover .why-icon { transform: scale(1.15) rotate(-5deg); }
+
+    .stat-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; backdrop-filter: blur(8px); transition: transform 0.3s; }
+    .stat-card:hover { transform: translateY(-4px); }
+
+    .form-input { width: 100%; padding: 12px 16px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.95rem; background: #fff; transition: border-color 0.3s, box-shadow 0.3s; outline: none; }
+    .form-input:focus { border-color: #f97316; box-shadow: 0 0 0 3px rgba(249,115,22,0.15); }
+
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #f97316, #c2570a); color: #fff; padding: 14px 32px; border-radius: 50px; font-weight: 700; font-size: 1rem; border: none; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(249,115,22,0.4); }
+
+    .btn-outline { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #fff; padding: 13px 30px; border-radius: 50px; font-weight: 700; font-size: 1rem; border: 2px solid rgba(255,255,255,0.55); cursor: pointer; transition: all 0.3s; text-decoration: none; }
+    .btn-outline:hover { background: rgba(255,255,255,0.12); border-color: #f97316; color: #f97316; }
+
+    .whatsapp-btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #25d366, #128c7e); color: #fff; padding: 14px 28px; border-radius: 50px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+    .whatsapp-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(37,211,102,0.4); }
+
+    #wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 900; width: 58px; height: 58px; background: linear-gradient(135deg, #25d366, #128c7e); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.6rem; box-shadow: 0 6px 20px rgba(37,211,102,0.5); animation: pulse-wa 2.5s infinite; text-decoration: none; }
+    @keyframes pulse-wa { 0%,100% { box-shadow: 0 6px 20px rgba(37,211,102,0.5); } 50% { box-shadow: 0 6px 35px rgba(37,211,102,0.85); } }
+
+    .ticker-wrap { overflow: hidden; background: #f97316; }
+    .ticker-inner { display: flex; white-space: nowrap; animation: ticker 30s linear infinite; }
+    @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+
+    .inquire-btn { display: inline-flex; align-items: center; gap: 7px; background: linear-gradient(135deg, #0f2a4e, #1f56a8); color: #fff; padding: 10px 22px; border-radius: 50px; font-size: 0.88rem; font-weight: 600; border: none; cursor: pointer; transition: all 0.3s; text-decoration: none; }
+    .inquire-btn:hover { background: linear-gradient(135deg, #f97316, #c2570a); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(249,115,22,0.35); }
+  </style>
+</head>
+<body>
+
+<!-- FLOATING WHATSAPP -->
+<a id="wa-float" href="https://wa.me/917355246732?text=Hello%20Gurjeet%20Industry%2C%20I%20need%20tractor%20spare%20parts." target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="bg-transparent py-4">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+        <i class="fas fa-cog text-white text-lg"></i>
+      </div>
+      <div>
+        <span class="font-heading text-white text-xl font-bold tracking-wide leading-none block">GURJEET</span>
+        <span class="text-orange-400 text-xs font-semibold tracking-widest uppercase">Industry</span>
+      </div>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-200">
+      <li><a href="#about"    class="nav-link hover:text-white flex items-center gap-1.5"><i class="fas fa-info-circle text-orange-400 text-xs"></i> About Us</a></li>
+      <li><a href="#products" class="nav-link hover:text-white flex items-center gap-1.5"><i class="fas fa-tools text-orange-400 text-xs"></i> Spare Parts</a></li>
+      <li><a href="#why"      class="nav-link hover:text-white flex items-center gap-1.5"><i class="fas fa-star text-orange-400 text-xs"></i> Why Us</a></li>
+      <li><a href="#contact"  class="nav-link hover:text-white flex items-center gap-1.5"><i class="fas fa-phone text-orange-400 text-xs"></i> Contact</a></li>
+    </ul>
+
+    <a href="tel:+917355246732" class="hidden xl:flex items-center gap-2 bg-white/10 border border-white/20 text-white text-xs px-4 py-2 rounded-full hover:bg-orange-500/80 hover:border-orange-500 transition-all duration-300">
+      <i class="fas fa-phone-alt text-orange-400"></i>
+      <span>+91 73552 46732</span>
+    </a>
+
+    <button id="menu-btn" class="lg:hidden text-white text-xl focus:outline-none" aria-label="Toggle menu">
+      <i class="fas fa-bars" id="menu-icon"></i>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="lg:hidden bg-blue-950/98 backdrop-blur-md border-t border-white/10 px-6 pt-4 pb-6 space-y-3">
+    <a href="#about"    class="block text-slate-200 hover:text-orange-400 py-2 border-b border-white/10 text-sm font-medium"><i class="fas fa-info-circle mr-2 text-orange-400"></i>About Us</a>
+    <a href="#products" class="block text-slate-200 hover:text-orange-400 py-2 border-b border-white/10 text-sm font-medium"><i class="fas fa-tools mr-2 text-orange-400"></i>Spare Parts</a>
+    <a href="#why"      class="block text-slate-200 hover:text-orange-400 py-2 border-b border-white/10 text-sm font-medium"><i class="fas fa-star mr-2 text-orange-400"></i>Why Us</a>
+    <a href="#contact"  class="block text-slate-200 hover:text-orange-400 py-2 border-b border-white/10 text-sm font-medium"><i class="fas fa-phone mr-2 text-orange-400"></i>Contact</a>
+    <div class="flex items-center gap-2 text-xs text-slate-400 pt-2">
+      <i class="fas fa-map-marker-alt text-orange-400"></i>
+      <span>House No. 10280, Street No. 4, Janta Nagar, Ludhiana</span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="relative flex items-center">
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-1/4 left-10 w-2 h-2 bg-orange-400/40 rounded-full animate-ping" style="animation-delay:0s;animation-duration:3s"></div>
+    <div class="absolute top-1/3 right-20 w-1.5 h-1.5 bg-white/30 rounded-full animate-ping" style="animation-delay:1s;animation-duration:4s"></div>
+    <div class="absolute bottom-1/3 left-1/4 w-1 h-1 bg-orange-400/50 rounded-full animate-ping" style="animation-delay:2s;animation-duration:3.5s"></div>
+    <div class="absolute top-2/3 right-1/3 w-2 h-2 bg-blue-300/30 rounded-full animate-ping" style="animation-delay:0.5s;animation-duration:5s"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-32 md:py-40">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 bg-orange-500/20 border border-orange-500/40 text-orange-300 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+        <i class="fas fa-industry"></i>
+        Ludhiana's Trusted Manufacturer Since 2005
+      </div>
+
+      <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+        High-Performance<br />
+        <span class="gradient-text">Tractor Spare Parts</span><br />
+        for Every Model
+      </h1>
+
+      <p class="text-slate-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+        Precision-engineered components built with heavy-duty alloys and industrial-grade materials — designed to withstand the harshest field conditions and maximize your machinery's uptime.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mb-12">
+        <a href="#products" class="btn-primary text-base">
+          <i class="fas fa-th-large"></i> View Parts Catalog
+        </a>
+        <a href="#contact" class="btn-outline text-base">
+          <i class="fas fa-file-alt"></i> Get Quote
+        </a>
+      </div>
+
+      <div class="flex flex-wrap gap-4 text-xs text-slate-300 font-medium">
+        <span class="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full"><i class="fas fa-check-circle text-green-400"></i> ISO Certified Quality</span>
+        <span class="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full"><i class="fas fa-shipping-fast text-orange-400"></i> Pan-India Shipping</span>
+        <span class="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full"><i class="fas fa-headset text-blue-300"></i> 24/7 Support</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-xs animate-bounce">
+    <span>Scroll Down</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap py-2.5">
+  <div class="ticker-inner text-white text-sm font-semibold tracking-wide">
+    <span class="px-8">&#9881;&#65039; Engine &amp; Piston Components</span>
+    <span class="px-8">&#128295; Transmission &amp; Gearbox Parts</span>
+    <span class="px-8">&#127959;&#65039; Hydraulic Lift Systems</span>
+    <span class="px-8">&#128668; Front Axle &amp; Steering Assemblies</span>
+    <span class="px-8">&#9881;&#65039; Heavy-Duty Bearings &amp; Clutch Plates</span>
+    <span class="px-8">&#128290; Quality Guaranteed</span>
+    <span class="px-8">&#128230; Fast Delivery Across India</span>
+    <span class="px-8">&#9881;&#65039; Engine &amp; Piston Components</span>
+    <span class="px-8">&#128295; Transmission &amp; Gearbox Parts</span>
+    <span class="px-8">&#127959;&#65039; Hydraulic Lift Systems</span>
+    <span class="px-8">&#128668; Front Axle &amp; Steering Assemblies</span>
+    <span class="px-8">&#9881;&#65039; Heavy-Duty Bearings &amp; Clutch Plates</span>
+    <span class="px-8">&#128290; Quality Guaranteed</span>
+    <span class="px-8">&#128230; Fast Delivery Across India</span>
+  </div>
+</div>
+
+<!-- ABOUT US -->
+<section id="about" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="fade-in">
+        <p class="text-orange-500 font-bold text-sm uppercase tracking-widest mb-3">About Us</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-blue-950 mb-2 leading-tight">
+          Built on Precision.<br />Trusted by Thousands.
+        </h2>
+        <span class="section-underline mx-0 mb-6"></span>
+
+        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+          <strong class="text-blue-950">Gurjeet Industry</strong> is a leading manufacturer of tractor spare parts based in the heart of Ludhiana — India's industrial capital. With over two decades of manufacturing excellence, we supply precision-engineered components to farmers, dealers, and OEMs across India.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-8">
+          Our state-of-the-art facility uses heavy-duty alloys, CNC machined components, and rigorous quality testing to ensure every part meets — and often exceeds — OEM standards. We're not just manufacturers; we are the backbone of India's agricultural machinery ecosystem.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-orange-400 transition-colors group">
+            <div class="text-orange-500 text-2xl mb-2 group-hover:scale-110 transition-transform inline-block"><i class="fas fa-drafting-compass"></i></div>
+            <h4 class="font-bold text-blue-950 text-sm mb-1">Precision Engineering</h4>
+            <p class="text-slate-500 text-xs leading-relaxed">CNC machined to micron-level tolerances for a perfect fit every time.</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-orange-400 transition-colors group">
+            <div class="text-orange-500 text-2xl mb-2 group-hover:scale-110 transition-transform inline-block"><i class="fas fa-hard-hat"></i></div>
+            <h4 class="font-bold text-blue-950 text-sm mb-1">Heavy-Duty Materials</h4>
+            <p class="text-slate-500 text-xs leading-relaxed">Industrial-grade alloys and treated steel for maximum durability.</p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-orange-400 transition-colors group">
+            <div class="text-orange-500 text-2xl mb-2 group-hover:scale-110 transition-transform inline-block"><i class="fas fa-award"></i></div>
+            <h4 class="font-bold text-blue-950 text-sm mb-1">Industry Trust</h4>
+            <p class="text-slate-500 text-xs leading-relaxed">Preferred supplier for dealers across 18+ states in India.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-in relative">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+          <img
+            src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=800&q=80"
+            alt="Industrial manufacturing floor of Gurjeet Industry"
+            class="w-full h-80 lg:h-96 object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-blue-950/70 to-transparent flex flex-col justify-end p-8">
+            <p class="text-white font-heading text-2xl font-bold">20+ Years of Manufacturing Excellence</p>
+            <p class="text-slate-300 text-sm mt-1">Ludhiana, Punjab, India</p>
+          </div>
+        </div>
+
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-4 border border-slate-100 max-w-xs hidden md:block">
+          <p class="text-xs text-orange-500 font-bold uppercase tracking-wider mb-1"><i class="fas fa-map-marker-alt mr-1"></i>Our Address</p>
+          <p class="text-blue-950 font-semibold text-sm leading-snug">House No. 10280, Street No. 4,<br />Janta Nagar, Ludhiana – Punjab</p>
+          <a href="tel:+917355246732" class="text-orange-500 text-sm font-bold mt-2 flex items-center gap-1 hover:underline">
+            <i class="fas fa-phone-alt"></i> +91 73552 46732
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats" class="py-16" style="background: linear-gradient(135deg, #08172a 0%, #0f2a4e 60%, #1a3a6b 100%);">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="stat-card p-6 fade-in">
+        <div class="text-4xl font-heading font-bold gradient-text mb-1">20+</div>
+        <div class="text-slate-300 text-sm font-medium">Years in Business</div>
+      </div>
+      <div class="stat-card p-6 fade-in">
+        <div class="text-4xl font-heading font-bold gradient-text mb-1">500+</div>
+        <div class="text-slate-300 text-sm font-medium">Part Variants</div>
+      </div>
+      <div class="stat-card p-6 fade-in">
+        <div class="text-4xl font-heading font-bold gradient-text mb-1">18+</div>
+        <div class="text-slate-300 text-sm font-medium">States Served</div>
+      </div>
+      <div class="stat-card p-6 fade-in">
+        <div class="text-4xl font-heading font-bold gradient-text mb-1">10K+</div>
+        <div class="text-slate-300 text-sm font-medium">Happy Customers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 fade-in">
+      <p class="text-orange-500 font-bold text-sm uppercase tracking-widest mb-3">Our Product Range</p>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-blue-950 mb-2">Tractor Spare Parts Catalog</h2>
+      <span class="section-underline"></span>
+      <p class="text-slate-500 mt-6 max-w-2xl mx-auto">From engine internals to hydraulic systems — we manufacture and supply every critical component your tractor needs.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="product-card p-8 fade-in text-center" id="card-engine">
+        <div class="card-icon mx-auto">
+          <i class="fas fa-circle-notch text-white text-2xl"></i>
+        </div>
+        <h3 class="font-heading text-xl font-bold text-blue-950 mb-3">Engine &amp; Piston Components</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-5">High-compression pistons, cylinder liners, piston rings, valves, and camshafts built to handle the toughest loads with minimal wear.</p>
+        <ul class="text-left text-xs text-slate-500 space-y-1.5 mb-6">
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Piston Rings &amp; Liners</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Cylinder Head Gaskets</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Crankshaft Bearings</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Valve &amp; Camshaft Kits</li>
+        </ul>
+        <a href="#contact" class="inquire-btn"><i class="fas fa-envelope"></i> Inquire Now</a>
+      </div>
+
+      <div class="product-card p-8 fade-in text-center" id="card-transmission">
+        <div class="card-icon mx-auto">
+          <i class="fas fa-cogs text-white text-2xl"></i>
+        </div>
+        <h3 class="font-heading text-xl font-bold text-blue-950 mb-3">Transmission &amp; Gearbox Parts</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-5">Precision-cut gears, shafts, and synchronizer assemblies engineered for smooth power transfer and extended service life.</p>
+        <ul class="text-left text-xs text-slate-500 space-y-1.5 mb-6">
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Gear Wheels &amp; Shafts</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Synchronizer Rings</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Differential Assemblies</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>PTO Shafts &amp; Couplings</li>
+        </ul>
+        <a href="#contact" class="inquire-btn"><i class="fas fa-envelope"></i> Inquire Now</a>
+      </div>
+
+      <div class="product-card p-8 fade-in text-center" id="card-hydraulic">
+        <div class="card-icon mx-auto">
+          <i class="fas fa-tint text-white text-2xl"></i>
+        </div>
+        <h3 class="font-heading text-xl font-bold text-blue-950 mb-3">Hydraulic Lift Systems</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-5">High-pressure hydraulic pumps, cylinders, and control valves that deliver reliable lifting power season after season.</p>
+        <ul class="text-left text-xs text-slate-500 space-y-1.5 mb-6">
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Hydraulic Pump Kits</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Lift Arm &amp; Control Valve</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Cylinder Seal Kits</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Top Link &amp; Drag Links</li>
+        </ul>
+        <a href="#contact" class="inquire-btn"><i class="fas fa-envelope"></i> Inquire Now</a>
+      </div>
+
+      <div class="product-card p-8 fade-in text-center" id="card-axle">
+        <div class="card-icon mx-auto">
+          <i class="fas fa-car text-white text-2xl"></i>
+        </div>
+        <h3 class="font-heading text-xl font-bold text-blue-950 mb-3">Front Axle &amp; Steering Assemblies</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-5">Robust front axle beams, spindle pins, tie rod assemblies, and steering columns for precise control on rough terrain.</p>
+        <ul class="text-left text-xs text-slate-500 space-y-1.5 mb-6">
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Front Axle Beams</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Spindle Pins &amp; Bushings</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Tie Rod Ends</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Steering Box Kits</li>
+        </ul>
+        <a href="#contact" class="inquire-btn"><i class="fas fa-envelope"></i> Inquire Now</a>
+      </div>
+
+      <div class="product-card p-8 fade-in text-center" id="card-bearings">
+        <div class="card-icon mx-auto">
+          <i class="fas fa-circle text-white text-2xl"></i>
+        </div>
+        <h3 class="font-heading text-xl font-bold text-blue-950 mb-3">Heavy-Duty Bearings &amp; Clutch Plates</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-5">High-load ball bearings, roller bearings, and multi-disc clutch assemblies manufactured for extended operational cycles.</p>
+        <ul class="text-left text-xs text-slate-500 space-y-1.5 mb-6">
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Ball &amp; Roller Bearings</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Clutch Pressure Plates</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Release Bearings</li>
+          <li><i class="fas fa-check text-orange-500 mr-2"></i>Friction Disc Kits</li>
+        </ul>
+        <a href="#contact" class="inquire-btn"><i class="fas fa-envelope"></i> Inquire Now</a>
+      </div>
+
+      <div class="product-card p-8 fade-in text-center" id="card-custom" style="background: linear-gradient(135deg, #0f2a4e 0%, #08172a 100%); border-color: #1f3a5f;">
+        <div class="card-icon mx-auto" style="background: linear-gradient(135deg, #f97316, #c2570a);">
+          <i class="fas fa-wrench text-white text-2xl"></i>
+        </div>
+        <h3 class="font-heading text-xl font-bold text-white mb-3">Custom &amp; OEM Orders</h3>
+        <p class="text-slate-300 text-sm leading-relaxed mb-5">Need a part not listed here? We accept bulk OEM orders and custom manufacturing requests with your design specifications.</p>
+        <ul class="text-left text-xs text-slate-300 space-y-1.5 mb-6">
+          <li><i class="fas fa-check text-orange-400 mr-2"></i>OEM Manufacturing</li>
+          <li><i class="fas fa-check text-orange-400 mr-2"></i>Custom CNC Machining</li>
+          <li><i class="fas fa-check text-orange-400 mr-2"></i>Bulk Order Discounts</li>
+          <li><i class="fas fa-check text-orange-400 mr-2"></i>White-Label Packaging</li>
+        </ul>
+        <a href="#contact" class="btn-primary text-sm px-5 py-2.5"><i class="fas fa-comments"></i> Discuss Order</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 fade-in">
+      <p class="text-orange-500 font-bold text-sm uppercase tracking-widest mb-3">Why Choose Us</p>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-blue-950 mb-2">The Gurjeet Advantage</h2>
+      <span class="section-underline"></span>
+      <p class="text-slate-500 mt-6 max-w-xl mx-auto">We don't just make parts — we deliver performance, reliability, and peace of mind with every shipment.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="why-card p-7 fade-in text-center" id="why-quality">
+        <div class="why-icon mx-auto"><i class="fas fa-shield-alt"></i></div>
+        <h3 class="font-heading text-xl font-bold text-blue-950 mb-3">Quality Assurance</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Every component undergoes multi-stage quality testing — dimensional checks, hardness testing, and load trials — before it leaves our factory.</p>
+      </div>
+
+      <div class="why-card p-7 fade-in text-center" id="why-pricing">
+        <div class="why-icon mx-auto"><i class="fas fa-tags"></i></div>
+        <h3 class="font-heading text-xl font-bold text-blue-950 mb-3">Competitive Pricing</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Direct-from-manufacturer pricing means you get premium quality without the premium markup. Better margins for dealers and resellers.</p>
+      </div>
+
+      <div class="why-card p-7 fade-in text-center" id="why-delivery">
+        <div class="why-icon mx-auto"><i class="fas fa-truck"></i></div>
+        <h3 class="font-heading text-xl font-bold text-blue-950 mb-3">On-Time Delivery</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Our logistics network covers 18+ states. We guarantee dispatch within 24–48 hours for in-stock items and provide real-time tracking.</p>
+      </div>
+
+      <div class="why-card p-7 fade-in text-center" id="why-custom">
+        <div class="why-icon mx-auto"><i class="fas fa-sliders-h"></i></div>
+        <h3 class="font-heading text-xl font-bold text-blue-950 mb-3">Custom Orders</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Share your drawing or sample and our engineering team will manufacture to your exact specifications — any quantity, any complexity.</p>
+      </div>
+    </div>
+
+    <div class="mt-14 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 fade-in" style="background: linear-gradient(135deg, #08172a 0%, #0f2a4e 60%, #3a4a5c 100%);">
+      <div>
+        <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-2">Ready to place your order?</h3>
+        <p class="text-slate-300 text-sm">Talk to our parts specialist today — get a quote in under 30 minutes.</p>
+      </div>
+      <div class="flex flex-wrap gap-4">
+        <a href="https://wa.me/917355246732?text=Hello%20Gurjeet%20Industry%2C%20I%20need%20a%20quote." target="_blank" rel="noopener" class="whatsapp-btn">
+          <i class="fab fa-whatsapp text-xl"></i> WhatsApp Us
+        </a>
+        <a href="#contact" class="btn-primary"><i class="fas fa-file-alt"></i> Get Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24" style="background: linear-gradient(180deg, #f1f5f9 0%, #e8f0fa 100%);">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 fade-in">
+      <p class="text-orange-500 font-bold text-sm uppercase tracking-widest mb-3">Get In Touch</p>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-blue-950 mb-2">Contact Us</h2>
+      <span class="section-underline"></span>
+      <p class="text-slate-500 mt-6 max-w-xl mx-auto">Have a part requirement or bulk order inquiry? Fill in the form below and we'll get back to you within a few hours.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-12">
+      <div class="lg:col-span-3 fade-in">
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-8 md:p-10">
+          <h3 class="font-heading text-2xl font-bold text-blue-950 mb-6">Send an Inquiry</h3>
+          <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-sm font-semibold text-slate-700 mb-1.5">Full Name <span class="text-red-500">*</span></label>
+                <input id="name" name="name" type="text" placeholder="e.g. Harpreet Singh" class="form-input" required />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-semibold text-slate-700 mb-1.5">Phone Number <span class="text-red-500">*</span></label>
+                <input id="phone" name="phone" type="tel" placeholder="e.g. +91 98765 43210" class="form-input" required />
+              </div>
+            </div>
+            <div>
+              <label for="part" class="block text-sm font-semibold text-slate-700 mb-1.5">Part Required <span class="text-red-500">*</span></label>
+              <select id="part" name="part" class="form-input" required>
+                <option value="">— Select a Category —</option>
+                <option>Engine &amp; Piston Components</option>
+                <option>Transmission &amp; Gearbox Parts</option>
+                <option>Hydraulic Lift Systems</option>
+                <option>Front Axle &amp; Steering Assemblies</option>
+                <option>Heavy-Duty Bearings &amp; Clutch Plates</option>
+                <option>Custom / OEM Order</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="tractor" class="block text-sm font-semibold text-slate-700 mb-1.5">Tractor Model / Brand</label>
+              <input id="tractor" name="tractor" type="text" placeholder="e.g. Mahindra 575 DI, Sonalika DI 745" class="form-input" />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-semibold text-slate-700 mb-1.5">Additional Details</label>
+              <textarea id="message" name="message" rows="4" placeholder="Describe the part you need, quantity, urgency, etc." class="form-input resize-none"></textarea>
+            </div>
+            <button type="submit" id="submit-btn" class="btn-primary w-full justify-center text-base">
+              <i class="fas fa-paper-plane"></i> Send Inquiry
+            </button>
+          </form>
+          <div id="form-success" class="hidden mt-6 bg-green-50 border border-green-200 rounded-xl p-5 text-center">
+            <i class="fas fa-check-circle text-green-500 text-3xl mb-3"></i>
+            <p class="text-green-700 font-bold text-lg">Inquiry Sent Successfully!</p>
+            <p class="text-green-600 text-sm mt-1">We'll get back to you within a few hours. You can also WhatsApp us for faster response.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-2 fade-in space-y-6">
+        <div class="bg-white rounded-2xl shadow-lg border border-slate-100 p-6">
+          <h4 class="font-heading text-lg font-bold text-blue-950 mb-4 flex items-center gap-2">
+            <span class="w-8 h-8 bg-orange-50 rounded-lg flex items-center justify-center"><i class="fas fa-map-marker-alt text-orange-500 text-sm"></i></span>
+            Our Location
+          </h4>
+          <p class="text-slate-600 text-sm leading-relaxed mb-3">
+            <strong>House No. 10280</strong>, Street No. 4,<br />
+            Janta Nagar, Ludhiana – Punjab<br />
+            India – 141 008
+          </p>
+          <a href="https://maps.google.com/?q=Janta+Nagar+Ludhiana+Punjab" target="_blank" rel="noopener" class="text-orange-500 text-sm font-semibold hover:underline flex items-center gap-1">
+            <i class="fas fa-external-link-alt text-xs"></i> View on Google Maps
+          </a>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg border border-slate-100 p-6">
+          <h4 class="font-heading text-lg font-bold text-blue-950 mb-4 flex items-center gap-2">
+            <span class="w-8 h-8 bg-orange-50 rounded-lg flex items-center justify-center"><i class="fas fa-phone-alt text-orange-500 text-sm"></i></span>
+            Call / WhatsApp
+          </h4>
+          <a href="tel:+917355246732" class="flex items-center gap-3 text-blue-950 font-semibold text-lg hover:text-orange-500 transition-colors mb-2">
+            <i class="fas fa-phone text-orange-500"></i>
+            +91 73552 46732
+          </a>
+          <p class="text-slate-400 text-xs mb-4">Available Mon – Sat, 9 AM – 7 PM IST</p>
+          <a href="https://wa.me/917355246732?text=Hello%20Gurjeet%20Industry%2C%20I%20need%20tractor%20spare%20parts." target="_blank" rel="noopener" class="whatsapp-btn w-full justify-center text-sm py-3">
+            <i class="fab fa-whatsapp text-xl"></i> Start WhatsApp Chat
+          </a>
+        </div>
+
+        <div class="rounded-2xl p-6 text-white" style="background: linear-gradient(135deg, #0f2a4e 0%, #08172a 100%);">
+          <h4 class="font-heading text-lg font-bold mb-4 flex items-center gap-2">
+            <i class="fas fa-clock text-orange-400"></i> Business Hours
+          </h4>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between text-slate-200">
+              <span>Monday – Saturday</span>
+              <span class="font-semibold text-white">9:00 AM – 7:00 PM</span>
+            </div>
+            <div class="flex justify-between text-slate-400">
+              <span>Sunday</span>
+              <span class="text-red-300 font-medium">Closed</span>
+            </div>
+          </div>
+          <div class="mt-4 pt-4 border-t border-white/20 text-xs text-slate-300">
+            <i class="fas fa-info-circle text-orange-400 mr-1"></i>
+            Emergency orders accepted via WhatsApp anytime.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="pt-16 pb-8" style="background: linear-gradient(135deg, #08172a 0%, #0f2a4e 100%);">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+            <i class="fas fa-cog text-white text-lg"></i>
+          </div>
+          <div>
+            <span class="font-heading text-white text-xl font-bold tracking-wide block">GURJEET INDUSTRY</span>
+            <span class="text-orange-400 text-xs font-semibold tracking-widest uppercase">Premium Tractor Spare Parts</span>
+          </div>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-sm mb-5">Ludhiana's trusted manufacturer of high-quality tractor spare parts. Precision-engineered for performance, built to last.</p>
+        <div class="flex gap-3">
+          <a href="https://wa.me/917355246732" target="_blank" rel="noopener" class="w-9 h-9 bg-white/10 hover:bg-green-500 rounded-lg flex items-center justify-center text-white transition-colors" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="tel:+917355246732" class="w-9 h-9 bg-white/10 hover:bg-orange-500 rounded-lg flex items-center justify-center text-white transition-colors" aria-label="Call">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h5 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Quick Links</h5>
+        <ul class="space-y-2.5 text-sm text-slate-400">
+          <li><a href="#about"    class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-orange-500"></i>About Us</a></li>
+          <li><a href="#products" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-orange-500"></i>Spare Parts</a></li>
+          <li><a href="#why"      class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-orange-500"></i>Why Us</a></li>
+          <li><a href="#contact"  class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-orange-500"></i>Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Our Products</h5>
+        <ul class="space-y-2.5 text-sm text-slate-400">
+          <li><a href="#products" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-orange-500"></i>Engine &amp; Piston Parts</a></li>
+          <li><a href="#products" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-orange-500"></i>Transmission Parts</a></li>
+          <li><a href="#products" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-orange-500"></i>Hydraulic Systems</a></li>
+          <li><a href="#products" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-orange-500"></i>Axle &amp; Steering</a></li>
+          <li><a href="#products" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-orange-500"></i>Bearings &amp; Clutch</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <p>&copy; 2025 Gurjeet Industry. All rights reserved. | House No. 10280, Street No. 4, Janta Nagar, Ludhiana</p>
+      <p class="flex items-center gap-1">Made with <i class="fas fa-heart text-red-400 mx-1"></i> in Ludhiana, Punjab</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    menuIcon.classList.toggle('fa-bars');
+    menuIcon.classList.toggle('fa-times');
+  });
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuIcon.classList.add('fa-bars');
+      menuIcon.classList.remove('fa-times');
+    });
+  });
+
+  // Fade-in on scroll
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  fadeEls.forEach(el => observer.observe(el));
+
+  // Form submit
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success');
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    btn.disabled = true;
+    setTimeout(() => {
+      form.classList.add('hidden');
+      successMsg.classList.remove('hidden');
+    }, 1500);
+  }
+
+  // Active nav highlight
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      if (window.scrollY >= section.offsetTop - 100) current = section.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+      link.style.color = link.getAttribute('href') === '#' + current ? '#f97316' : '';
+    });
+  });
+</script>
+</body>
+</html>

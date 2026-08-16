@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | Manpreet Kaur - Web Designer & Frontend Developer</title>
+  <meta name="description" content="Learn more about Manpreet Kaur, a Web Designer and Frontend Developer based in Punjab, India. Professional journey, skills, and education." />
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom CSS Design Tokens & Styles -->
+  <link rel="stylesheet" href="./src/index.css" />
+</head>
+<body class="bg-[#090d16] text-slate-100 antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- Header Navigation Bar -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-2 group">
+        <div class="w-10 h-10 bg-slate-900 dark:bg-slate-950 rounded-xl flex items-center justify-center font-extrabold text-white text-lg tracking-wider border border-slate-700/50">
+          MK
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-lg tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+            Manpreet Kaur
+          </span>
+          <span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium tracking-wide uppercase">
+            Web Designer
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-200/50 dark:bg-slate-800/40 p-1.5 rounded-full border border-slate-300/40 dark:border-slate-700/50 backdrop-blur-md">
+        <a href="index.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">Home</a>
+        <a href="about.html" class="px-4 py-2 rounded-full text-sm font-medium bg-indigo-600 text-white shadow-md shadow-indigo-600/30">About</a>
+        <a href="projects.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">Projects</a>
+        <a href="experience.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">Services & Experience</a>
+        <a href="contact.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">Contact</a>
+      </nav>
+
+      <!-- Action Controls & Dark Mode Switcher -->
+      <div class="flex items-center gap-3">
+        <button class="theme-toggle-btn p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800/70 border border-slate-300/50 dark:border-slate-700/60 text-slate-700 dark:text-slate-200 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-600 dark:hover:text-white transition-all duration-300 focus:outline-none" aria-label="Toggle Theme">
+          <svg class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+
+        <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold btn-primary">
+          <span>Let's Talk</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800/70 text-slate-700 dark:text-slate-200 border border-slate-300/50 dark:border-slate-700/60" aria-label="Toggle Navigation">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu-drawer" class="hidden md:hidden mt-3 px-4 pb-4">
+      <div class="glass-panel rounded-2xl p-4 flex flex-col gap-2 shadow-2xl border border-slate-300/50 dark:border-slate-700/80">
+        <a href="index.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl text-base font-medium bg-indigo-600 text-white">About</a>
+        <a href="projects.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Projects</a>
+        <a href="experience.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Services & Experience</a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-32 pb-20 flex-grow">
+    
+    <!-- Hero / Intro Header -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider">
+          About Manpreet Kaur
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Passionate About Building <span class="text-gradient">Meaningful Web Products</span>
+        </h1>
+        <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+          I am a Web Designer and Frontend Developer based in Ludhiana, Punjab, India. I specialize in crafting clean, user-centric web applications with modern design systems and performant code.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bio & Background Grid -->
+    <section class="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Profile Visual -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-sm">
+            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-indigo-500 to-purple-500 opacity-40 blur-xl"></div>
+            <div class="relative glass-panel p-6 rounded-3xl space-y-6 text-center shadow-2xl border border-slate-200/80 dark:border-slate-800/80">
+              <img src="./public/images/myphoto.jpg" alt="Manpreet Kaur Profile Photo" class="w-36 h-36 mx-auto rounded-full object-cover shadow-xl border-4 border-indigo-500/30" />
+              <div>
+                <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">Manpreet Kaur</h3>
+                <p class="text-indigo-600 dark:text-indigo-400 font-semibold text-sm">Web Designer & Frontend Developer</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">📍 Ludhiana, Punjab, India</p>
+              </div>
+
+              <div class="pt-4 border-t border-slate-200 dark:border-slate-800/80 flex justify-center gap-3">
+                <a href="contact.html" class="w-full py-3 rounded-xl font-bold text-sm btn-primary">Work Together</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Bio Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">My Professional Journey</h2>
+          
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            My passion for web development began with a curiosity for design and aesthetics. Over the past 3+ years, I have honed my skills in HTML, CSS, JavaScript, React.js, and Tailwind CSS to transform complex ideas into intuitive digital interfaces.
+          </p>
+
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            I believe that great web design bridges utility and beauty. Every line of code I write prioritizes performance, responsiveness, and seamless user interaction across mobile, tablet, and desktop screens.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div class="glass-panel p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80">
+              <h4 class="font-bold text-lg text-slate-900 dark:text-white mb-1">🎓 Education & Foundation</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-400">Degree in Computer Applications & Web Technology, focusing on software design, algorithms, and UI engineering.</p>
+            </div>
+
+            <div class="glass-panel p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80">
+              <h4 class="font-bold text-lg text-slate-900 dark:text-white mb-1">💼 Freelance & Client Work</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-400">Delivered 25+ successful web projects for clients, startups, and creative agencies with 100% satisfaction.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Detailed Skills Breakdown -->
+    <section class="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 text-xs font-bold uppercase tracking-wider">
+          Skills & Competencies
+        </div>
+        <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Technical & <span class="text-gradient">Soft Skills</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Frontend Skills Card -->
+        <div class="glass-panel p-8 rounded-3xl space-y-6 border border-slate-200/80 dark:border-slate-800/80">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-xl">🎨</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Frontend Development</h3>
+          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+            <li class="flex items-center justify-between"><span>React.js (18+)</span> <span class="font-bold text-indigo-600 dark:text-indigo-400">92%</span></li>
+            <li class="flex items-center justify-between"><span>JavaScript (ES6+)</span> <span class="font-bold text-indigo-600 dark:text-indigo-400">90%</span></li>
+            <li class="flex items-center justify-between"><span>Tailwind CSS</span> <span class="font-bold text-indigo-600 dark:text-indigo-400">95%</span></li>
+            <li class="flex items-center justify-between"><span>HTML5 & CSS3</span> <span class="font-bold text-indigo-600 dark:text-indigo-400">98%</span></li>
+            <li class="flex items-center justify-between"><span>Next.js</span> <span class="font-bold text-indigo-600 dark:text-indigo-400">85%</span></li>
+          </ul>
+        </div>
+
+        <!-- Backend Skills Card -->
+        <div class="glass-panel p-8 rounded-3xl space-y-6 border border-slate-200/80 dark:border-slate-800/80">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold text-xl">⚙️</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Backend & Tools</h3>
+          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+            <li class="flex items-center justify-between"><span>Node.js & Express</span> <span class="font-bold text-purple-600 dark:text-purple-400">82%</span></li>
+            <li class="flex items-center justify-between"><span>RESTful APIs</span> <span class="font-bold text-purple-600 dark:text-purple-400">90%</span></li>
+            <li class="flex items-center justify-between"><span>MongoDB & Firebase</span> <span class="font-bold text-purple-600 dark:text-purple-400">80%</span></li>
+            <li class="flex items-center justify-between"><span>Git & GitHub</span> <span class="font-bold text-purple-600 dark:text-purple-400">92%</span></li>
+            <li class="flex items-center justify-between"><span>Vite & Build Tools</span> <span class="font-bold text-purple-600 dark:text-purple-400">88%</span></li>
+          </ul>
+        </div>
+
+        <!-- Soft Skills Card -->
+        <div class="glass-panel p-8 rounded-3xl space-y-6 border border-slate-200/80 dark:border-slate-800/80">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center font-bold text-xl">🌟</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Soft Skills & Values</h3>
+          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+            <li class="flex items-center gap-2"><span>💡</span> <span>UI/UX Aesthetic Sensitivity</span></li>
+            <li class="flex items-center gap-2"><span>🔍</span> <span>Obsessive Attention to Detail</span></li>
+            <li class="flex items-center gap-2"><span>⚡</span> <span>Fast Learning & Adaptability</span></li>
+            <li class="flex items-center gap-2"><span>🤝</span> <span>Agile Client Communication</span></li>
+            <li class="flex items-center gap-2"><span>🎯</span> <span>Problem Solving & Optimization</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="relative z-10 bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-slate-800">
+        <div class="space-y-2 text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center font-extrabold text-white text-sm">MK</div>
+            <span class="font-extrabold text-xl tracking-tight text-white">Manpreet Kaur</span>
+          </div>
+          <p class="text-sm text-slate-400 max-w-sm">Web Designer & Developer crafting sleek, user-friendly digital experiences.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 text-sm font-semibold text-slate-400">
+          <a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a>
+          <a href="about.html" class="text-indigo-400">About</a>
+          <a href="projects.html" class="hover:text-indigo-400 transition-colors">Projects</a>
+          <a href="experience.html" class="hover:text-indigo-400 transition-colors">Services & Experience</a>
+          <a href="contact.html" class="hover:text-indigo-400 transition-colors">Contact</a>
+        </div>
+
+        <button id="back-to-top" class="p-3.5 rounded-2xl bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white transition-all duration-300 border border-slate-700 shadow-lg group" title="Back to Top">
+          <svg class="w-5 h-5 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 Manpreet Kaur. All rights reserved.</p>
+        <p>Built with HTML, Tailwind CSS & JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/js/main.js"></script>
+</body>
+</html>

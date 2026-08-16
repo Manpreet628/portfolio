@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me | Manpreet Kaur - Web Designer & Developer</title>
+  <meta name="description" content="Get in touch with Manpreet Kaur for web design, frontend React development projects, and freelance inquiries. Direct email and phone info." />
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom CSS Design Tokens & Styles -->
+  <link rel="stylesheet" href="./src/index.css" />
+</head>
+<body class="bg-[#090d16] text-slate-100 antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- Header Navigation Bar -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-2 group">
+        <div class="w-10 h-10 bg-slate-900 dark:bg-slate-950 rounded-xl flex items-center justify-center font-extrabold text-white text-lg tracking-wider border border-slate-700/50">
+          MK
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-lg tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+            Manpreet Kaur
+          </span>
+          <span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium tracking-wide uppercase">
+            Web Designer
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-200/50 dark:bg-slate-800/40 p-1.5 rounded-full border border-slate-300/40 dark:border-slate-700/50 backdrop-blur-md">
+        <a href="index.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">Home</a>
+        <a href="about.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">About</a>
+        <a href="projects.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">Projects</a>
+        <a href="experience.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">Services & Experience</a>
+        <a href="contact.html" class="px-4 py-2 rounded-full text-sm font-medium bg-indigo-600 text-white shadow-md shadow-indigo-600/30">Contact</a>
+      </nav>
+
+      <!-- Action Controls & Dark Mode Switcher -->
+      <div class="flex items-center gap-3">
+        <button class="theme-toggle-btn p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800/70 border border-slate-300/50 dark:border-slate-700/60 text-slate-700 dark:text-slate-200 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-600 dark:hover:text-white transition-all duration-300 focus:outline-none" aria-label="Toggle Theme">
+          <svg class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+
+        <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold btn-primary">
+          <span>Let's Talk</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800/70 text-slate-700 dark:text-slate-200 border border-slate-300/50 dark:border-slate-700/60" aria-label="Toggle Navigation">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu-drawer" class="hidden md:hidden mt-3 px-4 pb-4">
+      <div class="glass-panel rounded-2xl p-4 flex flex-col gap-2 shadow-2xl border border-slate-300/50 dark:border-slate-700/80">
+        <a href="index.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+        <a href="projects.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Projects</a>
+        <a href="experience.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Services & Experience</a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl text-base font-medium bg-indigo-600 text-white">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-32 pb-20 flex-grow">
+    
+    <!-- Contact Header -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider">
+          Get In Touch
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Let's Build Something <span class="text-gradient">Great Together</span>
+        </h1>
+        <p class="text-slate-600 dark:text-slate-400 text-lg">
+          Have a project in mind, a freelance opportunity, or a general question? Send a message below or connect directly.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Details & Interactive Form -->
+    <section class="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Contact Cards Column -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Email Card -->
+          <div class="glass-panel p-6 rounded-2xl flex items-start gap-4 hover:border-indigo-500/50 transition-all duration-300 shadow-md group">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center flex-shrink-0 font-bold group-hover:scale-110 transition-transform">✉️</div>
+            <div class="flex-1 min-w-0">
+              <h4 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Email Address</h4>
+              <a href="mailto:mk62837584@gmail.com" class="text-base sm:text-lg font-bold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 truncate block mt-0.5">
+                mk62837584@gmail.com
+              </a>
+            </div>
+            <button data-copy="mk62837584@gmail.com" class="copy-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-600 hover:text-white transition-colors" title="Copy Email">
+              Copy
+            </button>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="glass-panel p-6 rounded-2xl flex items-start gap-4 hover:border-indigo-500/50 transition-all duration-300 shadow-md group">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center flex-shrink-0 font-bold group-hover:scale-110 transition-transform">📞</div>
+            <div class="flex-1 min-w-0">
+              <h4 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Phone / WhatsApp</h4>
+              <a href="tel:+916283758448" class="text-base sm:text-lg font-bold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 truncate block mt-0.5">
+                +91 6283758448
+              </a>
+            </div>
+            <button data-copy="+91 6283758448" class="copy-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-600 hover:text-white transition-colors" title="Copy Phone">
+              Copy
+            </button>
+          </div>
+
+          <!-- Location Card -->
+          <div class="glass-panel p-6 rounded-2xl flex items-start gap-4 shadow-md">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center flex-shrink-0 font-bold">📍</div>
+            <div>
+              <h4 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Location</h4>
+              <p class="text-base font-bold text-slate-900 dark:text-white mt-0.5">Ludhiana, Punjab, India</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Available for Remote Work Worldwide</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact Form Column -->
+        <div class="lg:col-span-7">
+          <div class="glass-panel rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-200/80 dark:border-slate-800/80">
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Send a Message</h3>
+
+            <form id="contact-form" class="space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Your Name <span class="text-red-500">*</span></label>
+                  <input type="text" id="form-name" required placeholder="e.g. Alex Smith" class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800/70 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all" />
+                </div>
+
+                <div class="space-y-2">
+                  <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Your Email <span class="text-red-500">*</span></label>
+                  <input type="email" id="form-email" required placeholder="alex@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800/70 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all" />
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Subject</label>
+                <input type="text" id="form-subject" placeholder="Project Proposal / Website Design" class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800/70 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all" />
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-slate-700 dark:text-slate-300">Message <span class="text-red-500">*</span></label>
+                <textarea id="form-message" required rows="5" placeholder="Hello Manpreet, I'd like to talk about a website project..." class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800/70 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl font-extrabold text-base btn-primary flex items-center justify-center gap-2 shadow-lg disabled:opacity-50">
+                <span>Send Message</span>
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Toast Feedback Modal -->
+  <div id="toast" class="hidden fixed bottom-6 right-6 z-50 animate-bounce">
+    <div class="glass-panel px-5 py-4 rounded-2xl shadow-2xl border border-emerald-500/40 bg-slate-900/95 text-white flex items-center gap-3">
+      <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</div>
+      <div>
+        <h4 class="font-bold text-sm text-white">Message Sent Successfully!</h4>
+        <p id="toast-message" class="text-xs text-slate-300">Thank you! Your message has been received.</p>
+      </div>
+      <button id="toast-close" class="ml-2 text-slate-400 hover:text-white p-1 rounded-lg transition-colors">✕</button>
+    </div>
+  </div>
+
+  <!-- Shared Footer -->
+  <footer class="relative z-10 bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-slate-800">
+        <div class="space-y-2 text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center font-extrabold text-white text-sm">MK</div>
+            <span class="font-extrabold text-xl tracking-tight text-white">Manpreet Kaur</span>
+          </div>
+          <p class="text-sm text-slate-400 max-w-sm">Web Designer & Developer crafting sleek, user-friendly digital experiences.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 text-sm font-semibold text-slate-400">
+          <a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a>
+          <a href="about.html" class="hover:text-indigo-400 transition-colors">About</a>
+          <a href="projects.html" class="hover:text-indigo-400 transition-colors">Projects</a>
+          <a href="experience.html" class="hover:text-indigo-400 transition-colors">Services & Experience</a>
+          <a href="contact.html" class="text-indigo-400">Contact</a>
+        </div>
+
+        <button id="back-to-top" class="p-3.5 rounded-2xl bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white transition-all duration-300 border border-slate-700 shadow-lg group" title="Back to Top">
+          <svg class="w-5 h-5 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 Manpreet Kaur. All rights reserved.</p>
+        <p>Built with HTML, Tailwind CSS & JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/js/main.js"></script>
+  <script src="./src/js/contact.js"></script>
+</body>
+</html>

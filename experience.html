@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services & Experience | Manpreet Kaur - Web Designer & Developer</title>
+  <meta name="description" content="Explore career timeline, work experience history, and web design & frontend development services offered by Manpreet Kaur." />
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom CSS Design Tokens & Styles -->
+  <link rel="stylesheet" href="./src/index.css" />
+</head>
+<body class="bg-[#090d16] text-slate-100 antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- Header Navigation Bar -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-2 group">
+        <div class="w-10 h-10 bg-slate-900 dark:bg-slate-950 rounded-xl flex items-center justify-center font-extrabold text-white text-lg tracking-wider border border-slate-700/50">
+          MK
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-lg tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+            Manpreet Kaur
+          </span>
+          <span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium tracking-wide uppercase">
+            Web Designer
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-200/50 dark:bg-slate-800/40 p-1.5 rounded-full border border-slate-300/40 dark:border-slate-700/50 backdrop-blur-md">
+        <a href="index.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">Home</a>
+        <a href="about.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">About</a>
+        <a href="projects.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">Projects</a>
+        <a href="experience.html" class="px-4 py-2 rounded-full text-sm font-medium bg-indigo-600 text-white shadow-md shadow-indigo-600/30">Services & Experience</a>
+        <a href="contact.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">Contact</a>
+      </nav>
+
+      <!-- Action Controls & Dark Mode Switcher -->
+      <div class="flex items-center gap-3">
+        <button class="theme-toggle-btn p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800/70 border border-slate-300/50 dark:border-slate-700/60 text-slate-700 dark:text-slate-200 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-600 dark:hover:text-white transition-all duration-300 focus:outline-none" aria-label="Toggle Theme">
+          <svg class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+
+        <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold btn-primary">
+          <span>Let's Talk</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800/70 text-slate-700 dark:text-slate-200 border border-slate-300/50 dark:border-slate-700/60" aria-label="Toggle Navigation">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu-drawer" class="hidden md:hidden mt-3 px-4 pb-4">
+      <div class="glass-panel rounded-2xl p-4 flex flex-col gap-2 shadow-2xl border border-slate-300/50 dark:border-slate-700/80">
+        <a href="index.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+        <a href="projects.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Projects</a>
+        <a href="experience.html" class="px-4 py-3 rounded-xl text-base font-medium bg-indigo-600 text-white">Services & Experience</a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-32 pb-20 flex-grow">
+    
+    <!-- Experience Header -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider">
+          Experience & Services
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Services Offered & <span class="text-gradient">Career History</span>
+        </h1>
+        <p class="text-slate-600 dark:text-slate-400 text-lg">
+          Discover the web design & development services I provide to help brands scale, along with my professional career timeline.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Offered Grid -->
+    <section class="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-8 text-center sm:text-left">Web Services Offered</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Service 1 -->
+        <div class="glass-panel p-8 rounded-3xl space-y-4 border border-slate-200/80 dark:border-slate-800/80 hover:border-indigo-500/50 transition-all duration-300 shadow-xl">
+          <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-2xl">✨</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Custom Web Design & Prototyping</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Transforming concepts into high-fidelity Figma UI/UX designs, wireframes, interactive prototypes, and modern glassmorphism web layouts.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="glass-panel p-8 rounded-3xl space-y-4 border border-slate-200/80 dark:border-slate-800/80 hover:border-indigo-500/50 transition-all duration-300 shadow-xl">
+          <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center font-bold text-2xl">⚡</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Frontend Application Development</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Building fast, single-page and multi-page web applications with React.js 18, Tailwind CSS, JavaScript ES6+, and state management.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="glass-panel p-8 rounded-3xl space-y-4 border border-slate-200/80 dark:border-slate-800/80 hover:border-indigo-500/50 transition-all duration-300 shadow-xl">
+          <div class="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold text-2xl">📱</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Responsive & Performance Optimization</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Ensuring fluid layout adaptation across all mobile, tablet, and desktop viewports with fast page load speeds, SEO meta tags, and accessibility.
+          </p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="glass-panel p-8 rounded-3xl space-y-4 border border-slate-200/80 dark:border-slate-800/80 hover:border-indigo-500/50 transition-all duration-300 shadow-xl">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-2xl">🔌</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">API Integration & Full-Stack Basics</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Connecting frontend user interfaces to RESTful APIs, Node.js backend endpoints, MongoDB databases, and Firebase cloud services.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Work History Timeline -->
+    <section class="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-12 text-center sm:text-left">Work History & Career Timeline</h2>
+
+      <div class="relative border-l-2 border-slate-300 dark:border-slate-800 ml-4 sm:ml-8 space-y-12">
+        
+        <!-- Timeline Item 1 -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-[17px] top-1 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm shadow-lg">1</div>
+          <div class="glass-panel p-6 sm:p-8 rounded-3xl space-y-3 border border-slate-200/80 dark:border-slate-800/80 shadow-lg">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Freelance Web Designer & Frontend Dev</h3>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">2023 - Present</span>
+            </div>
+            <p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Independent Client Consultancy | Global Remote</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Designed and built custom React & Tailwind web applications for e-commerce, SaaS startups, and digital creative agencies. Delivered 25+ production-ready web platforms with 100% client satisfaction.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-[17px] top-1 w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-sm shadow-lg">2</div>
+          <div class="glass-panel p-6 sm:p-8 rounded-3xl space-y-3 border border-slate-200/80 dark:border-slate-800/80 shadow-lg">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Frontend Developer & UI Specialist</h3>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400">2022 - 2023</span>
+            </div>
+            <p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Digital Web Studio | Punjab, India</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Collaborated with product teams to build responsive user interfaces, modular React components, and glassmorphic dashboard tools. Improved web app loading speed and SEO metrics by 40%.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-[17px] top-1 w-8 h-8 rounded-full bg-cyan-600 text-white flex items-center justify-center font-bold text-sm shadow-lg">3</div>
+          <div class="glass-panel p-6 sm:p-8 rounded-3xl space-y-3 border border-slate-200/80 dark:border-slate-800/80 shadow-lg">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Web Design & Open Source Contributor</h3>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400">2021 - 2022</span>
+            </div>
+            <p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Open Source & Personal Projects</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Created open-source UI component templates, interactive code generator tools, and responsive website layouts using HTML, CSS, JavaScript, and Tailwind CSS.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="relative z-10 bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-slate-800">
+        <div class="space-y-2 text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center font-extrabold text-white text-sm">MK</div>
+            <span class="font-extrabold text-xl tracking-tight text-white">Manpreet Kaur</span>
+          </div>
+          <p class="text-sm text-slate-400 max-w-sm">Web Designer & Developer crafting sleek, user-friendly digital experiences.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 text-sm font-semibold text-slate-400">
+          <a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a>
+          <a href="about.html" class="hover:text-indigo-400 transition-colors">About</a>
+          <a href="projects.html" class="hover:text-indigo-400 transition-colors">Projects</a>
+          <a href="experience.html" class="text-indigo-400">Services & Experience</a>
+          <a href="contact.html" class="hover:text-indigo-400 transition-colors">Contact</a>
+        </div>
+
+        <button id="back-to-top" class="p-3.5 rounded-2xl bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white transition-all duration-300 border border-slate-700 shadow-lg group" title="Back to Top">
+          <svg class="w-5 h-5 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 Manpreet Kaur. All rights reserved.</p>
+        <p>Built with HTML, Tailwind CSS & JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/js/main.js"></script>
+</body>
+</html>

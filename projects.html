@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects Showcase | Manpreet Kaur - Web Designer & Developer</title>
+  <meta name="description" content="Explore featured web application & website design projects by Manpreet Kaur built with React, Tailwind CSS, JavaScript, and Node.js." />
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom CSS Design Tokens & Styles -->
+  <link rel="stylesheet" href="./src/index.css" />
+</head>
+<body class="bg-[#090d16] text-slate-100 antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- Header Navigation Bar -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-2 group">
+        <div class="w-10 h-10 bg-slate-900 dark:bg-slate-950 rounded-xl flex items-center justify-center font-extrabold text-white text-lg tracking-wider border border-slate-700/50">
+          MK
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-lg tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+            Manpreet Kaur
+          </span>
+          <span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium tracking-wide uppercase">
+            Web Designer
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-200/50 dark:bg-slate-800/40 p-1.5 rounded-full border border-slate-300/40 dark:border-slate-700/50 backdrop-blur-md">
+        <a href="index.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">Home</a>
+        <a href="about.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">About</a>
+        <a href="projects.html" class="px-4 py-2 rounded-full text-sm font-medium bg-indigo-600 text-white shadow-md shadow-indigo-600/30">Projects</a>
+        <a href="experience.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">Services & Experience</a>
+        <a href="contact.html" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-300/40 dark:hover:bg-slate-700/50 transition-all">Contact</a>
+      </nav>
+
+      <!-- Action Controls & Dark Mode Switcher -->
+      <div class="flex items-center gap-3">
+        <button class="theme-toggle-btn p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800/70 border border-slate-300/50 dark:border-slate-700/60 text-slate-700 dark:text-slate-200 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-600 dark:hover:text-white transition-all duration-300 focus:outline-none" aria-label="Toggle Theme">
+          <svg class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+
+        <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold btn-primary">
+          <span>Let's Talk</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800/70 text-slate-700 dark:text-slate-200 border border-slate-300/50 dark:border-slate-700/60" aria-label="Toggle Navigation">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu-drawer" class="hidden md:hidden mt-3 px-4 pb-4">
+      <div class="glass-panel rounded-2xl p-4 flex flex-col gap-2 shadow-2xl border border-slate-300/50 dark:border-slate-700/80">
+        <a href="index.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+        <a href="projects.html" class="px-4 py-3 rounded-xl text-base font-medium bg-indigo-600 text-white">Projects</a>
+        <a href="experience.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Services & Experience</a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-32 pb-20 flex-grow">
+    
+    <!-- Projects Page Header -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider">
+          Portfolio Showcase
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Featured <span class="text-gradient">Projects</span>
+        </h1>
+        <p class="text-slate-600 dark:text-slate-400 text-lg">
+          Explore a selection of recent web applications, agency platforms, and product landing pages designed and developed with React & Tailwind CSS.
+        </p>
+      </div>
+    </section>
+
+    <!-- Project Cards Grid -->
+    <section class="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Project 1 -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800/80 shadow-xl group flex flex-col justify-between hover:border-indigo-500/50 transition-all duration-300">
+          <div class="relative overflow-hidden aspect-video bg-slate-900">
+            <img src="./public/images/ecommerce.jpg" alt="E-Commerce Analytics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
+              <a href="#" target="_blank" class="p-3 rounded-full bg-white text-slate-900 font-bold shadow-lg hover:bg-indigo-600 hover:text-white transition-colors" title="Live Demo">🔗</a>
+              <a href="https://github.com/Manpreet628/portfolio" target="_blank" class="p-3 rounded-full bg-slate-900 text-white font-bold shadow-lg hover:bg-indigo-600 transition-colors" title="GitHub Repo">💻</a>
+            </div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-extrabold bg-slate-900/80 text-white backdrop-blur-md border border-slate-700">Full Stack</span>
+          </div>
+
+          <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">E-Commerce Analytics & Sales Dashboard</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                A high-performance analytics dashboard featuring real-time revenue graphs, sales funnel visualizations, customer management widgets, and order status updates.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-200/80 dark:border-slate-800/80 space-y-4">
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">React</span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Recharts</span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Node.js</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <a href="#" class="inline-flex items-center gap-1.5 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700">
+                  <span>Live Preview</span>
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a href="https://github.com/Manpreet628/portfolio" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white">
+                  <span>GitHub Repo</span>
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800/80 shadow-xl group flex flex-col justify-between hover:border-indigo-500/50 transition-all duration-300">
+          <div class="relative overflow-hidden aspect-video bg-slate-900">
+            <img src="./public/images/saas.jpg" alt="NovaTech AI SaaS Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
+              <a href="#" target="_blank" class="p-3 rounded-full bg-white text-slate-900 font-bold shadow-lg hover:bg-indigo-600 hover:text-white transition-colors" title="Live Demo">🔗</a>
+              <a href="https://github.com/Manpreet628/portfolio" target="_blank" class="p-3 rounded-full bg-slate-900 text-white font-bold shadow-lg hover:bg-indigo-600 transition-colors" title="GitHub Repo">💻</a>
+            </div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-extrabold bg-slate-900/80 text-white backdrop-blur-md border border-slate-700">Web Design</span>
+          </div>
+
+          <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">NovaTech AI SaaS Platform</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                Futuristic SaaS product landing page featuring dark glassmorphic UI, glowing 3D cards, predictive analytics section, and smooth scroll micro-animations.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-200/80 dark:border-slate-800/80 space-y-4">
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">React</span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Glassmorphism</span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Lucide</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <a href="#" class="inline-flex items-center gap-1.5 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700">
+                  <span>Live Preview</span>
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a href="https://github.com/Manpreet628/portfolio" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white">
+                  <span>GitHub Repo</span>
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800/80 shadow-xl group flex flex-col justify-between hover:border-indigo-500/50 transition-all duration-300">
+          <div class="relative overflow-hidden aspect-video bg-slate-900">
+            <img src="./public/images/agency.jpg" alt="Apex Digital Agency Portfolio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
+              <a href="#" target="_blank" class="p-3 rounded-full bg-white text-slate-900 font-bold shadow-lg hover:bg-indigo-600 hover:text-white transition-colors" title="Live Demo">🔗</a>
+              <a href="https://github.com/Manpreet628/portfolio" target="_blank" class="p-3 rounded-full bg-slate-900 text-white font-bold shadow-lg hover:bg-indigo-600 transition-colors" title="GitHub Repo">💻</a>
+            </div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-extrabold bg-slate-900/80 text-white backdrop-blur-md border border-slate-700">Web Design</span>
+          </div>
+
+          <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Apex Digital Agency Portfolio</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                Modern creative agency showcase platform designed to highlight branding case studies, interactive project grids, and client testimonials with bold typography.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-200/80 dark:border-slate-800/80 space-y-4">
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">React</span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">UI/UX Design</span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Framer Motion</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <a href="#" class="inline-flex items-center gap-1.5 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700">
+                  <span>Live Preview</span>
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a href="https://github.com/Manpreet628/portfolio" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white">
+                  <span>GitHub Repo</span>
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800/80 shadow-xl group flex flex-col justify-between hover:border-indigo-500/50 transition-all duration-300">
+          <div class="relative overflow-hidden aspect-video bg-slate-900">
+            <img src="./public/images/ai_workspace.jpg" alt="NeuraCode AI Workspace Studio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
+              <a href="#" target="_blank" class="p-3 rounded-full bg-white text-slate-900 font-bold shadow-lg hover:bg-indigo-600 hover:text-white transition-colors" title="Live Demo">🔗</a>
+              <a href="https://github.com/Manpreet628/portfolio" target="_blank" class="p-3 rounded-full bg-slate-900 text-white font-bold shadow-lg hover:bg-indigo-600 transition-colors" title="GitHub Repo">💻</a>
+            </div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-extrabold bg-slate-900/80 text-white backdrop-blur-md border border-slate-700">Frontend</span>
+          </div>
+
+          <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">NeuraCode AI Workspace Studio</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                Interactive AI code generation studio featuring split-pane chat interface, code snippet copy export, syntax highlight themes, and prompt history.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-200/80 dark:border-slate-800/80 space-y-4">
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">React</span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">JavaScript</span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">REST API</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <a href="#" class="inline-flex items-center gap-1.5 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700">
+                  <span>Live Preview</span>
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a href="https://github.com/Manpreet628/portfolio" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-900 dark:hover:text-white">
+                  <span>GitHub Repo</span>
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="relative z-10 bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-slate-800">
+        <div class="space-y-2 text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center font-extrabold text-white text-sm">MK</div>
+            <span class="font-extrabold text-xl tracking-tight text-white">Manpreet Kaur</span>
+          </div>
+          <p class="text-sm text-slate-400 max-w-sm">Web Designer & Developer crafting sleek, user-friendly digital experiences.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 text-sm font-semibold text-slate-400">
+          <a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a>
+          <a href="about.html" class="hover:text-indigo-400 transition-colors">About</a>
+          <a href="projects.html" class="text-indigo-400">Projects</a>
+          <a href="experience.html" class="hover:text-indigo-400 transition-colors">Services & Experience</a>
+          <a href="contact.html" class="hover:text-indigo-400 transition-colors">Contact</a>
+        </div>
+
+        <button id="back-to-top" class="p-3.5 rounded-2xl bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white transition-all duration-300 border border-slate-700 shadow-lg group" title="Back to Top">
+          <svg class="w-5 h-5 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 Manpreet Kaur. All rights reserved.</p>
+        <p>Built with HTML, Tailwind CSS & JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/js/main.js"></script>
+</body>
+</html>
