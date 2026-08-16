@@ -98,13 +98,13 @@ const Hero = ({ personalInfo }) => {
               {/* Main Card Graphic */}
               <div className="relative glass-panel rounded-3xl p-8 shadow-2xl space-y-6 text-slate-900 dark:text-white border border-slate-200/80 dark:border-slate-700/60">
                 
-                {/* Header Avatar Placeholder / Graphic */}
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-cyan-400 p-0.5 shadow-lg">
-                    <div className="w-full h-full bg-slate-900 rounded-[14px] flex items-center justify-center text-white font-extrabold text-2xl">
-                      MK
-                    </div>
-                  </div>
+                {/* Profile Header Container */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                  <img
+                    src="./public/images/myphoto.jpg"
+                    alt="Manpreet Kaur"
+                    className="w-20 h-20 rounded-full object-cover mb-3 shadow-md border-2 border-indigo-500/30"
+                  />
                   <div>
                     <h3 className="font-extrabold text-xl text-slate-900 dark:text-white">Manpreet Kaur</h3>
                     <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400">Web Designer & Frontend Dev</p>
@@ -115,8 +115,7 @@ const Hero = ({ personalInfo }) => {
                       <span>Punjab, India</span>
                     </div>
                   </div>
-                </div>
-
+                </div>             
                 {/* Code Visual Mockup */}
                 <div className="rounded-2xl bg-slate-900 text-slate-200 p-4 font-mono text-xs space-y-2 border border-slate-800 shadow-inner">
                   <div className="flex items-center gap-1.5 pb-2 border-b border-slate-800">
