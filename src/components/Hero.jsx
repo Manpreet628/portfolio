@@ -101,7 +101,7 @@ const Hero = ({ personalInfo }) => {
                 {/* Profile Header Container */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                   <img
-                    src="./public/images/myphoto.jpg"
+                    src="./public/images/manpreet.jpg"
                     alt="Manpreet Kaur"
                     className="w-20 h-20 rounded-full object-cover mb-3 shadow-md border-2 border-indigo-500/30"
                   />

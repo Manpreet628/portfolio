@@ -27,8 +27,8 @@ build/
 Thumbs.db
 desktop.ini
 
-# Logs
-*.log
+# Downloads
+public/Downloads/
 
 # Cache
 .cache/
