@@ -103,7 +103,7 @@ const Hero = ({ personalInfo }) => {
                   <img
                     src="./public/images/manpreet.jpg"
                     alt="Manpreet Kaur"
-                    className="w-20 h-20 rounded-full object-cover mb-3 shadow-md border-2 border-indigo-500/30"
+                    className="w-20 h-20 rounded-full object-cover mb-3"
                   />
                   <div>
                     <h3 className="font-extrabold text-xl text-slate-900 dark:text-white">Manpreet Kaur</h3>
