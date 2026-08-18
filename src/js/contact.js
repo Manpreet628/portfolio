@@ -1,4 +1,4 @@
-// Contact Page Interactive Logic & Toast Notification
+// Contact Page Interactive Logic & WhatsApp Redirection
 
 document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contact-form');
@@ -26,35 +26,30 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
       const nameInput = document.getElementById('form-name');
       const emailInput = document.getElementById('form-email');
+      const subjectInput = document.getElementById('form-subject');
+      const messageInput = document.getElementById('form-message');
 
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = `
-          <svg class="animate-spin w-5 h-5 text-white" fill="none" viewBox="0 0 24 24">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-          </svg>
-          <span>Sending Message...</span>
-        `;
+      const name = nameInput ? nameInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const subject = subjectInput ? subjectInput.value.trim() : '';
+      const message = messageInput ? messageInput.value.trim() : '';
+
+      // Validate required fields
+      if (!name || !message) {
+        showToast('Please fill in both your Name and Message before submitting.');
+        return;
       }
 
-      setTimeout(() => {
-        const userName = nameInput ? nameInput.value : 'friend';
-        contactForm.reset();
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = `
-            <span>Send Message</span>
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-            </svg>
-          `;
-        }
-        showToast(`Thank you, ${userName}! Your message has been received.`);
-      }, 600);
+      // Format WhatsApp Message
+      const formattedText = `Hello Manpreet,\n\n*Name:* ${name}\n*Email:* ${email || 'N/A'}\n*Subject:* ${subject || 'N/A'}\n*Message:* ${message}`;
+      const whatsappUrl = `https://wa.me/916283758448?text=${encodeURIComponent(formattedText)}`;
+
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, '_blank');
+
+      showToast(`Opening WhatsApp chat for ${name}...`);
     });
   }
 
