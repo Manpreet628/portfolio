@@ -27,7 +27,8 @@ build/
 Thumbs.db
 desktop.ini
 
-# Downloads
+# Temporary folders & Downloads
+GURJEET INDUSTRIES - Copy/
 public/Downloads/
 
 # Cache

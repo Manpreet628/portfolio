@@ -1,3 +1,4 @@
+import myimage from '../assets/manpreet.jpg';
 import React from 'react';
 
 const Hero = ({ personalInfo }) => {
@@ -22,6 +23,11 @@ const Hero = ({ personalInfo }) => {
             </div>
 
             {/* Catchy Main Heading */}
+            <img
+              src="https://i.postimg.cc/FHTDh0CF/manpreet.jpg"
+              alt="Manpreet Kaur"
+              className="w-20 h-20 rounded-full object-cover mb-3"
+            />
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
               Hi, I'm <span className="text-gradient">Manpreet Kaur</span> 👋
             </h1>
@@ -101,7 +107,7 @@ const Hero = ({ personalInfo }) => {
                 {/* Profile Header Container */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                   <img
-                    src="./public/images/manpreet.jpg"
+                    src={my image}
                     alt="Manpreet Kaur"
                     className="w-20 h-20 rounded-full object-cover mb-3"
                   />
